@@ -1,0 +1,38 @@
+/* global.css */
+
+body {
+    background-color: #cccccc;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .fancy-button {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute; /* Posicionamento absoluto */
+    top: 7px; /* Alinha no topo */
+    left: 10px; /* Alinha à esquerda */
+    margin: 10px; /* Espaçamento entre a borda e o botão */
+  }
+  
+  .header-footer {
+    background-color: #637392; /* Cor de preenchimento */
+    height: 3vh; /* Ocupar 80% da altura da tela */
+    width: 100%; /* Ocupar 100% da largura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+  }
