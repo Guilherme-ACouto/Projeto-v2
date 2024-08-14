@@ -1,6 +1,6 @@
 <template>
   <button class="fancy-button">
-    <slot></slot>
+    <slot></slot> <!-- Permite a inclusão do ícone -->
   </button>
 </template>
 
@@ -9,3 +9,4 @@ export default {
   name: 'FancyButton'
 }
 </script>
+

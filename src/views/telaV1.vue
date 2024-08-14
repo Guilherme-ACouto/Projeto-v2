@@ -1,26 +1,42 @@
 <template>
   <BaseLayout>
     <template v-slot:header>
-      <FancyButton>
-        Menu
-      </FancyButton>
+      <div class="header">
+        <ButtonMenu />
+        <FiltroComponent />
+      </div>
+    </template>
+
+    <template v-slot:main>
+      <div class="sub-header">
+        <ButtonLimpar />
+        <ButtonPesquisar />
+      </div>
     </template>
 
     <template v-slot:footer>
-      <p></p>
+      <div class="footer">
+      </div>
     </template>
   </BaseLayout>
 </template>
 
 <script>
 import BaseLayout from '@/components/BaseLayout.vue';
-import FancyButton from '@/components/FancyButton.vue';
+import ButtonMenu from '@/components/ButtonMenu.vue';
+import FiltroComponent from '@/components/FiltroComponent.vue';
+import ButtonLimpar from '@/components/ButtonLimpar.vue';
+import ButtonPesquisar from '@/components/ButtonPesquisar.vue';
+
 
 export default {
   name: 'TelaV1',
   components: {
     BaseLayout,
-    FancyButton
+    ButtonMenu,
+    FiltroComponent,
+    ButtonLimpar,
+    ButtonPesquisar,
   }
 };
 </script>
