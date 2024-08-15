@@ -87,3 +87,28 @@ body {
   padding: 0; /* Remove o padding para o botão de ícone */
   cursor: pointer;
 }
+
+/* Esconde o input de rádio real */
+input[type="radio"] {
+  display: none;
+}
+
+/* Estilo para os botões de rádio personalizados */
+.radio-label {
+  width: 20px;  /* Define a largura e altura iguais para tornar o botão redondo */
+  height: 20px;
+  border-radius: 50%;  /* Torna o botão perfeitamente redondo */
+  display: inline-block;
+  background-color: #e0e0e0;
+  margin: 5px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 20px; /* Centraliza o texto verticalmente */
+}
+
+/* Estilo para o botão de rádio selecionado */
+input[type="radio"]:checked + .radio-label {
+  background-color: #2883a1;  /* Cor de fundo quando selecionado */
+  color: white;  /* Cor do texto quando selecionado */
+}
+
