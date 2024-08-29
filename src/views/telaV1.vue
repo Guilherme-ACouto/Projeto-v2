@@ -6,11 +6,11 @@
 
     <template v-slot:main>
       <SubHeader />
+      <GridComponent />
     </template>
 
     <template v-slot:footer>
-      <div class="footer">
-      </div>
+      <FooterComponent />
     </template>
   </BaseLayout>
 </template>
@@ -19,6 +19,8 @@
 import BaseLayout from '@/components/BaseLayout.vue';
 import HeaderComponent from '@/components/HeaderComponent.vue';
 import SubHeader from '@/components/SubHeader.vue';
+import GridComponent from '@/components/GridComponent.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
 
 export default {
   name: 'TelaV1',
@@ -26,6 +28,8 @@ export default {
     BaseLayout,
     HeaderComponent,
     SubHeader,
+    GridComponent,
+    FooterComponent,
   }
 };
 </script>

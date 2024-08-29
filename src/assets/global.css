@@ -2,42 +2,55 @@
 body {
   background-color: #ffffff;
   font-family: 'Arial', sans-serif;
-  margin: 0; /* Remove a margem padrão do body */
-  padding: 0; /* Remove o padding padrão do body */
-  box-sizing: border-box; /* Inclui padding e border na largura e altura do elemento */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .header {
-  height: 7.5vh; /* Altura fixa para header */
-  width: calc(100% - 40px); /* Largura total menos o padding do body e a margem */
-  margin: 10px auto; /* Espaçamento superior e inferior, e centralização horizontal */
+  height: 7.5vh;
+  width: calc(100% - 40px);
+  margin: 10px auto;
   display: flex;
   align-items: center;
-  padding: 0 20px; /* Padding interno */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12); /* Sombra */
-  background-color: #2883a1; /* Cor de fundo para o header */
-  color: white; /* Cor do texto no header */
-  box-sizing: border-box; /* Inclui padding e border na largura e altura do elemento */
+  padding: 0 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+  background-color: #2883a1;
+  color: white;
+  box-sizing: border-box;
+}
+
+.footer {
+  height: 7.5vh;
+  width: calc(100% - 40px);
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+  background-color: #2883a1;
+  color: white;
+  box-sizing: border-box;
 }
 
 .sub-header {
   height: 7.5vh;
-  width: calc(100% - 40px); /* Largura igual ao header */
-  margin: 10px auto; /* Espaçamento superior e inferior, e centralização horizontal */
+  width: calc(100% - 40px);
+  margin: 10px auto;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  padding: 0 20px; /* Mesmo padding interno do header */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12); /* Mesma sombra do header */
-  background-color: #ffffff; /* Cor de fundo */
-  color: black; /* Cor do texto */
+  justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+  padding: 0 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+  color: black;
   box-sizing: border-box;
 }
 
 /* Botões */
 .menu {
-  width: 40px; /* Ajuste o tamanho conforme necessário */
-  height: 40px; /* Ajuste o tamanho conforme necessário */
+  width: 40px;
+  height: 40px;
   background-color: #2883a1;
   border: none;
   border-radius: 5px;
@@ -48,8 +61,8 @@ body {
 }
 
 .limpar {
-  position: absolute; /* Adicionado */
-  right: 80px; /* Ajuste conforme necessário */
+  position: absolute;
+  right: 80px;
   background-color: #ffffff;
   color: #000000;
   border: none;
@@ -57,8 +70,8 @@ body {
 }
 
 .pesquisar {
-  position: absolute; /* Adicionado */
-  right: 30px; /* Ajuste conforme necessário */
+  position: absolute;
+  right: 30px;
   background-color: #ffffff;
   color: #000000;
   border: none;
@@ -69,8 +82,8 @@ body {
 .filtro-container {
   display: flex;
   align-items: center;
-  margin: 15px 0 20px; /* Ajuste conforme necessário */
-  margin-left: auto; /* Alinha o filtro à direita */
+  margin: 15px 0 20px;
+  margin-left: auto;
 }
 
 .filtro-input {
@@ -82,33 +95,117 @@ body {
 
 /* Estilos específicos para FancyButton */
 .fancy-button i {
-  font-size: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+  font-size: 24px;
   color: #ffffff;
-  padding: 0; /* Remove o padding para o botão de ícone */
+  padding: 0;
   cursor: pointer;
 }
 
-/* Esconde o input de rádio real */
 input[type="radio"] {
-  display: none;
+  display: none; /* Esconde o input de rádio real */
 }
 
-/* Estilo para os botões de rádio personalizados */
 .radio-label {
-  width: 20px;  /* Define a largura e altura iguais para tornar o botão redondo */
+  width: 20px;
   height: 20px;
-  border-radius: 50%;  /* Torna o botão perfeitamente redondo */
+  border-radius: 50%;
   display: inline-block;
   background-color: #e0e0e0;
-  margin: 5px;
+  margin-right: 8px; /* Espaço entre o botão de rádio e o texto */
   cursor: pointer;
-  text-align: center;
-  line-height: 20px; /* Centraliza o texto verticalmente */
+  vertical-align: middle;
 }
 
-/* Estilo para o botão de rádio selecionado */
 input[type="radio"]:checked + .radio-label {
-  background-color: #2883a1;  /* Cor de fundo quando selecionado */
-  color: white;  /* Cor do texto quando selecionado */
+  background-color: #2883a1;
+  color: white;
 }
 
+label {
+  display: flex; /* Mantém os itens em linha */
+  align-items: center; /* Alinha verticalmente os itens ao centro */
+  margin-right: 20px; /* Espaçamento entre os grupos de rádio */
+  cursor: pointer;
+}
+
+/* Ajusta o contêiner de radio buttons para alinhar à esquerda */
+.sub-header {
+  padding: 0 20px; /* Remove padding se necessário */
+}
+
+.sub-header > div {
+  display: flex;
+  align-items: center; /* Alinha verticalmente os itens ao centro */
+  margin: 0; /* Remove qualquer margem adicional */
+}
+
+.filtro-texto {
+  margin-right: 10px;
+  color: #2883a1;
+}
+
+.grid-component {
+  width: calc(100% - 40px);
+  margin: 10px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+  color: black;
+  box-sizing: border-box;
+  width: calc;
+}
+
+.table-header-bobinas, .table-header-fardos {
+  font-size: 12px; /* Tamanho da fonte ajustado */
+  white-space: normal; /* Permite a quebra de linha */
+  word-wrap: break-word; /* Garante a quebra de palavras longas */
+  text-align: center; /* Alinha o texto ao centro */
+  padding: 5px; /* Adiciona um padding para melhor aparência */
+}
+
+.table-header-bobinas {
+  font-size: 14px; /* Tamanho maior para bobinas, se necessário */
+}
+
+/* Adiciona estilo básico para as linhas da tabela */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Remove espaçamentos entre células */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.popup-content p {
+  margin-bottom: 10px;
+}
+
+.popup-content button {
+  padding: 5px 10px;
+  background-color: #2883a1;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-content button:hover {
+  background-color: #0056b3;
+}

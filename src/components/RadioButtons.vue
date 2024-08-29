@@ -1,28 +1,41 @@
 <template>
   <div>
+    <span class="filtro-texto">Filtro </span>
     <label>
-      <input type="radio" value="bobina" v-model="selectedOption" />
+      <input type="radio" value="bobinas" v-model="selectedType" @change="emitChange">
       <span class="radio-label"></span>
+      Bobinas
     </label>
     <label>
-      <input type="radio" value="fardo" v-model="selectedOption" />
+      <input type="radio" value="fardos" v-model="selectedType" @change="emitChange">
       <span class="radio-label"></span>
+      Fardos
     </label>
-    
-    <div>
-      Filtro: {{ selectedOption }}
-    </div>
   </div>
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex';
+
 export default {
   name: 'RadioButtons',
-  data() {
-    return {
-      selectedOption: '', // Armazena a opção selecionada
-    };
+  computed: {
+    ...mapState(['selectedOption']),
+    selectedType: {
+      get() {
+        return this.selectedOption;
+      },
+      set(value) {
+        this.updateSelectedOption(value);
+        this.$emit('selection-changed', value); // Emit the event
+      }
+    }
+  },
+  methods: {
+    ...mapActions(['updateSelectedOption']),
+    emitChange() {
+      this.updateSelectedOption(this.selectedType);
+    }
   }
 };
 </script>
-

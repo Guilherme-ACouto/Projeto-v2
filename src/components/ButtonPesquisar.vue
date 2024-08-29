@@ -1,5 +1,5 @@
 <template>
-  <FancyButton class="pesquisar">
+  <FancyButton class="pesquisar" :disabled="disabled">
     <i class="fa-solid fa-magnifying-glass" style="color: #74C0FC;"></i>
   </FancyButton>
 </template>
@@ -12,5 +12,8 @@ export default {
   components: {
     FancyButton,
   },
+  props: {
+    disabled: Boolean
+  }
 };
 </script>

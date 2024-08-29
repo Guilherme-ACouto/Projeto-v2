@@ -1,5 +1,5 @@
 <template>
-  <FancyButton class="limpar">
+  <FancyButton class="limpar" :disabled="disabled">
     <i class="fa-solid fa-x" style="color: #c80e0e;"></i>
   </FancyButton>
 </template>
@@ -12,5 +12,8 @@ export default {
   components: {
     FancyButton,
   },
+  props: {
+    disabled: Boolean
+  }
 };
 </script>
