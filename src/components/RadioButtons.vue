@@ -27,7 +27,7 @@ export default {
       },
       set(value) {
         this.updateSelectedOption(value);
-        this.$emit('selection-changed', value); // Emit the event
+        this.$emit('selection-changed', value);
       }
     }
   },

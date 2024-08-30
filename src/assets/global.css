@@ -1,10 +1,30 @@
 /* Estilos globais */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #ffffff;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.base-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que o contêiner ocupe toda a altura da tela */
+}
+
+main {
+  flex: 1; /* Faz com que o main ocupe o espaço disponível */
+}
+
+header, footer {
+  width: 100%;
 }
 
 .header {
@@ -22,8 +42,6 @@ body {
 
 .footer {
   height: 7.5vh;
-  width: calc(100% - 40px);
-  margin: 10px auto;
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -31,6 +49,8 @@ body {
   background-color: #2883a1;
   color: white;
   box-sizing: border-box;
+  margin: 10px auto;
+  width: calc(100% - 40px);
 }
 
 .sub-header {
@@ -152,7 +172,6 @@ label {
   background-color: #ffffff;
   color: black;
   box-sizing: border-box;
-  width: calc;
 }
 
 .table-header-bobinas, .table-header-fardos {

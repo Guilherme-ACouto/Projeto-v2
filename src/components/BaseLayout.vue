@@ -1,6 +1,6 @@
 <!-- BaseLayout.vue -->
 <template>
-  <div>
+  <div class="base-layout">
     <header>
       <slot name="header"></slot>
     </header>
@@ -18,4 +18,3 @@ export default {
   name: 'BaseLayout'
 };
 </script>
-
